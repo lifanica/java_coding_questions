@@ -1,10 +1,5 @@
-/*
- * Copyright (c) 2003-2011 CEDSIF. All rights reserved.
- */
-
-import questions.TwoSum;
-
-import java.util.Arrays;
+import questions.RomanToInt;
+import java.util.Scanner;
 
 /**
  * @author Ivan Lifaniça
@@ -13,7 +8,12 @@ import java.util.Arrays;
 public class Main {
     public static void main(String [] args){
 
-        TwoSum t = new TwoSum();
-        System.out.println(Arrays.toString(t.twoSumWithMap(new int[]{2, 5, 5, 11}, 10)));
+        RomanToInt t = new RomanToInt();
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a ROMAN number: ");
+        String s = scanner.nextLine();
+        System.out.println(t.romanToInt(s));
+        //System.out.println(Arrays.toString(t.twoSumWithMap(new int[]{2, 5, 5, 11}, 10)));
     }
 }
