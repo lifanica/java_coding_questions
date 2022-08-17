@@ -4,7 +4,9 @@
 package questions;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Ivan Lifaniça
@@ -12,28 +14,35 @@ import java.util.Map;
 
 public class MorseCode {
 
+    public int uniqueMorseRepresentations(String[] words) {
+        String[] MORSE = new String[]{".-","-...","-.-.","-..",".","..-.","--.",
+                "....","..",".---","-.-",".-..","--","-.",
+                "---",".--.","--.-",".-.","...","-","..-",
+                "...-",".--","-..-","-.--","--.."};
+
+        Set<String> seen = new HashSet();
+        for (String word: words) {
+            StringBuilder code = new StringBuilder();
+            for (char c: word.toCharArray())
+                code.append(MORSE[c - 'a']);
+            seen.add(code.toString());
+        }
+
+        return seen.size();
+    }
+
     public int morseCode(String[] words){
         Map<Character, String> dicionary = getDicionary();
-        boolean exit = true;
-        boolean controller = false;
-        int refPositionWord = 0;
-        int refPositionChar = 0;
-        int transformations = 1;
-        do{
-            for(int i =0 ; i< words.length; i++){
-                if(i+1 < words.length) {
-                    if (refPositionChar < words[i + 1].toCharArray().length && words[i].toCharArray().length > 0 && refPositionChar < words[refPositionWord].toCharArray().length) {
-                        dicionary.get(words[refPositionWord].charAt(words[i + 1].charAt(refPositionChar)));
-                        if (!dicionary.get(words[refPositionWord].charAt(refPositionChar)).equals(dicionary.get(words[i + 1].charAt(refPositionChar)))) {
-                            transformations ++;
-                        }
-                    }
-                    }
-            }
 
-        }while(exit);
+        Set<String> transformation = new HashSet();
+        for (String word: words) {
+            StringBuilder code = new StringBuilder();
+            for (char c: word.toCharArray())
+                code.append(dicionary.get(c));
+            transformation.add(code.toString());
+        }
 
-        return 1;
+        return transformation.size();
     }
 
     private Map<Character, String> getDicionary(){

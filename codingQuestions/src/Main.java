@@ -15,7 +15,7 @@ public class Main {
 //        System.out.println("Enter a ROMAN number: ");
 //        String s = scanner.nextLine();
         MorseCode m = new MorseCode();
-        //System.out.println(m.morseCode());
+        System.out.println(m.morseCode(new String[]{"gin","zen","gig","msg"}));
         //System.out.println(Arrays.toString(t.twoSumWithMap(new int[]{2, 5, 5, 11}, 10)));
     }
 }
