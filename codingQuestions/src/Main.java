@@ -1,4 +1,5 @@
 import questions.LongestPrefix;
+import questions.MorseCode;
 import questions.RomanToInt;
 import java.util.Scanner;
 
@@ -13,7 +14,8 @@ public class Main {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter a ROMAN number: ");
 //        String s = scanner.nextLine();
-        System.out.println(t.longestPrefix(new String[]{"a","ac"}));
+        MorseCode m = new MorseCode();
+        //System.out.println(m.morseCode());
         //System.out.println(Arrays.toString(t.twoSumWithMap(new int[]{2, 5, 5, 11}, 10)));
     }
 }
