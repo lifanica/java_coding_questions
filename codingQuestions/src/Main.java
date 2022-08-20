@@ -1,7 +1,4 @@
-import questions.LongestPrefix;
-import questions.MorseCode;
-import questions.RomanToInt;
-import questions.ValidParentheses;
+import questions.*;
 
 import java.util.Scanner;
 
@@ -16,8 +13,8 @@ public class Main {
 //        Scanner scanner = new Scanner(System.in);
 //        System.out.println("Enter a ROMAN number: ");
 //        String s = scanner.nextLine();
-        ValidParentheses m = new ValidParentheses();
-        System.out.println(m.isValid("()"));
+        ContainsDuplicate m = new ContainsDuplicate();
+        System.out.println(m.containsDuplicateV1(new int[]{1,0,1,1}));
         //System.out.println(Arrays.toString(t.twoSumWithMap(new int[]{2, 5, 5, 11}, 10)));
     }
 }
