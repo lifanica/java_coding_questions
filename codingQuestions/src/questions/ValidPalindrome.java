@@ -32,7 +32,7 @@ public class ValidPalindrome {
         if (s == null || s.isEmpty())
             return s;
         if(stringCache[s.length()] != null) return stringCache[s.length()];
-            stringCache[s.length()] = s.charAt(s.length() - 1 ) + validPalindromeUppercase(stringCache,s.substring(0, s.length() - 1));
+        stringCache[s.length()] = s.charAt(s.length() - 1 ) + validPalindromeUppercase(stringCache,s.substring(0, s.length() - 1));
         return stringCache[s.length()];
     }
 

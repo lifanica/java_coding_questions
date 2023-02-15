@@ -5,20 +5,24 @@ package questions;
  */
 public class ReverseSring {
 
-    //rev(abc) = c + b + a = cba
-    //rev(s) = charAt(s.length - 1) + rev(s without last char)
+    //rev(abcde) = c + b + a = cba
+    //rev(s) = char(s.length -1 ) + rev(s whithout last character)
     public static void main(String[] args) {
-        System.out.println(isPalindrome("ana"));
+        System.out.println(reverseString("abcd"));
 
     }
 
-    private static String reverse(String s) {
-        if (s == null || s.isEmpty())
+
+    public static String reverseString(String s){
+        if(s == null || s.length() == 0)
             return s;
-        return s.charAt(s.length() - 1 ) + reverse(s.substring(0, s.length() - 1));
+        return s.charAt(s.length() - 1) + reverseString(s.substring(0, s.length() - 1));
     }
 
-    private static boolean isPalindrome(String s){
-        return s.equals(reverse(s));
+    public static boolean isPalindrome(String s){
+        return s.equals(reverseString(s));
     }
+
+
+
 }

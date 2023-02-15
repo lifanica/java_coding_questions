@@ -31,7 +31,7 @@ public class Main {
 //        });
 
         Fibonacci f = new Fibonacci();
-        System.out.println(f.fibonacci(6));
+        //System.out.println(f.fibonacci(6));
 
 
         //

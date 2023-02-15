@@ -1,6 +1,3 @@
-/*
- * Copyright (c) 2003-2011 CEDSIF. All rights reserved.
- */
 package questions;
 
 import java.util.HashMap;
