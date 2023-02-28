@@ -21,6 +21,8 @@ public class Anagram {
 
         System.out.println(isAnagram("anagram","nagaraa"));
 
+       // System.out.println("hello.ivan,".replaceAll("[^A-Za-z]",""));
+
 
 
     }
